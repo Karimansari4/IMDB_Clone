@@ -1,0 +1,45 @@
+body{
+    background: rgb(117, 109, 109) !important;
+}
+
+.my-border{
+    border-radius: 25% 10%;
+}
+
+.movie-img{
+    transition: 1s;
+}
+
+.movie-img:hover {
+    box-shadow: 0px 0px 10px rgb(117, 109, 109);
+    cursor: pointer;
+    
+}
+
+.col-md-8{
+    transition: 1s;
+}
+
+.col-md-8:hover{
+    box-shadow: 0px 0px 10px rgb(117, 109, 109);
+}
+
+.my-nav-bg {
+    /* background: rgb(117, 109, 109); */
+    /* color: white; */
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+.movie-img {
+    height: 50vh;
+    object-fit: cover;
+}
+
+.nav-item{
+    transition: 0.5s;
+}
+
+.nav-item:hover{
+    box-shadow: 0px 0px 10px rgb(240, 236, 236);
+    border-radius: 5px;
+}
