@@ -7,7 +7,7 @@ function getDataById(){
     if(!imdbID){
         alert('Sorry! Data not found?')
     }else{
-        fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
+        fetch(`https://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
         
         if(data.Response == "False"){
             mainDiv.innerHTML += `<h2 class="text-center text-light">No Result found?</h2>`

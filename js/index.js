@@ -15,7 +15,7 @@ searchBtn.addEventListener('click', (evt) => {
       alert('Please enter movie name!')
     }else{
       searchMovies.innerHTML =''
-      fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?t=${searchByTitle.value}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
+      fetch(`https://www.omdbapi.com/?t=${searchByTitle.value}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
         
         if(data.Response == "False"){
           searchMovies.innerHTML += `<h2 class="text-center text-light">No Result found on ${searchByTitle.value}</h2>`
