@@ -6,6 +6,8 @@ const searchMovies = document.getElementById('searchMovies')
 
 let dataStore;
 
+// 'https://cors-anywhere.herokuapp.com/corsdemo'
+
 searchBtn.addEventListener('click', (evt) => {
     evt.preventDefault()
     dataStore = ''
@@ -13,7 +15,7 @@ searchBtn.addEventListener('click', (evt) => {
       alert('Please enter movie name!')
     }else{
       searchMovies.innerHTML =''
-      fetch(`http://www.omdbapi.com/?t=${searchByTitle.value}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
+      fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?t=${searchByTitle.value}&plot=full&apikey=${myApiKey}`).then((response) => response.json()).then((data) => {
         
         if(data.Response == "False"){
           searchMovies.innerHTML += `<h2 class="text-center text-light">No Result found on ${searchByTitle.value}</h2>`
